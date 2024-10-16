@@ -43,6 +43,28 @@
         th, td {
             padding: 8px;
             text-align: center;
+            word-wrap: break-word; /* Para quebrar as palavras longas */
+        }
+
+        th:nth-child(1), td:nth-child(1) { /* Foto */
+            width: 60%;
+        }        
+
+        /* Definir largura específica para cada coluna */
+        th:nth-child(2), td:nth-child(2) { /* Grupo */
+            width: 20%;
+        }
+
+        th:nth-child(3), td:nth-child(3) { /* Desc Produto */
+            width: 40%;
+        }
+
+        th:nth-child(4), td:nth-child(4) { /* Desc Cor */
+            width: 20%;
+        }
+
+        th:nth-child(5), td:nth-child(5) { /* Classificação */
+            width: 20%;
         }
 
         #login-form input {
