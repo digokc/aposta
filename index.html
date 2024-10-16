@@ -203,6 +203,9 @@
                 document.getElementById('content-container').style.display = 'block';
                 document.getElementById('welcome-message').textContent = `Bem-vindo, ${username}!`;
 
+                // Certifica que a página começa do topo
+                window.scrollTo(0, 0);
+
                 if (currentUser.role === 'user') {
                     displayPage(1);
                     document.getElementById('save-button').style.display = 'block';
