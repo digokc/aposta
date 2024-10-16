@@ -233,8 +233,8 @@
             const tableContainer = document.getElementById('table-container');
             let tableHTML = '<table id="classification-table"><tr><th>Foto</th><th>Grupo</th><th>Desc Produto</th><th>Desc Cor</th><th>Classificação</th></tr>';
             for (let i = 0; i < itemCount; i++) {
-                const savedValue = currentUser.data[i] || '';
-                const item = itemsToShow[i];
+            const savedValue = currentUser.data[i] || '-'; // Padrão para "-"
+            const item = itemsToShow[i];
 
                 tableHTML += `<tr>
                     <td><img src="${item.imageUrl}" alt="Item ${i + 1}"></td>
@@ -242,7 +242,7 @@
                     <td>${item.descProduto}</td>
                     <td>${item.descCor}</td>
                     <td><select data-item="${i}" data-user="${currentUser.username}">
-                        <option value="-" ${savedValue === '-' ? 'selected' : ''} disabled>-</option>
+                        <option value="-" ${savedValue === '-' ? 'selected' : ''}>-</option>
                         <option value="A" ${savedValue === 'A' ? 'selected' : ''}>A</option>
                         <option value="B" ${savedValue === 'B' ? 'selected' : ''}>B</option>
                         <option value="C" ${savedValue === 'C' ? 'selected' : ''}>C</option>
